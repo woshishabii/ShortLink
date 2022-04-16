@@ -11,7 +11,11 @@ from . import forms
 
 def index(request):
     num = models.LinkModel.objects.aggregate(Count('lid'))['lid__count']
-    return render(request, 'linker/index.html', {'num': num})
+    context = {
+        'num': num,
+        'links': models.LinkModel.objects.order_by('-count')
+    }
+    return render(request, 'linker/index.html', context)
 
 
 '''

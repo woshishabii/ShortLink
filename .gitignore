@@ -1,4 +1,6 @@
 db.sqlite3
 linker/migrations
 .idea
-__pycache__
+__pycache__/
+/*.pyc
+*.pyc

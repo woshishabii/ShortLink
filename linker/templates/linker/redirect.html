@@ -1,0 +1,24 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+    <meta http-equiv="refresh" content="{{ link.wait }};url={{ link.target }}">
+
+    <title>LID - Redirecting to [{{ link.name }}]</title>
+    <link rel="stylesheet" href="{% static 'linker/redirect_css.css' %}">
+</head>
+
+<body>
+<div class="loader">
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+</div>
+<h1>Redirecting in {{ link.wait }} seconds</h1>
+</body>
+</html>

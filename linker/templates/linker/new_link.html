@@ -1,0 +1,6 @@
+<p>Add a short link:</p>
+<form action="{% url 'linker:new_link' %}" method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button name="submit" >Add</button>
+</form>
